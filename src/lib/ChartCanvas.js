@@ -584,9 +584,7 @@ class ChartCanvas extends Component {
 			const { onLoadMore } = this.props;
 
 			this.setState(state, () => {
-				if (start < end) {
 					onLoadMore(start, end);
-				}
 			});
 		}
 	}
@@ -643,9 +641,7 @@ class ChartCanvas extends Component {
 			plotData,
 			chartConfig,
 		}, () => {
-			if (start < end) {
 				onLoadMore(start, end);
-			}
 		});
 	}
 	xAxisZoom(newDomain) {
@@ -664,7 +660,7 @@ class ChartCanvas extends Component {
 			plotData,
 			chartConfig,
 		}, () => {
-			if (start < end) onLoadMore(start, end);
+			onLoadMore(start, end);
 		});
 	}
 	yAxisZoom(chartId, newDomain) {
@@ -822,7 +818,7 @@ class ChartCanvas extends Component {
 				plotData,
 				chartConfig,
 			}, () => {
-				if (start < end) onLoadMore(start, end);
+				onLoadMore(start, end);
 			});
 		});
 	}
